@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Visualiser - Soundcloud API, Web Audio API, and three.js</title>
-<meta charset="UTF-8"> 
-<link rel="stylesheet" href="main.css">
-</head>
-<body>
-<div id="controlsBlock">
-	<input id="soundcloudUrlTextbox" placeholder="Paste a Soundcloud URL here" />
-	<input id="playButton" value="Go" type="submit" onclick="audioPlayer.playSong()" />
-	<input id="debugButton" value="Debug" type="submit" onclick="audioPlayer.debug()" />
-</div>
-<audio id="playerElement" controls></audio>
-<script src="sc-sdk-3.1.2.js"></script>
-<script src="three.js"></script>
-<script src="main.js"></script>
-<script>
-audioPlayer = new AudioPlayer("playerElement");
-audioPlayer.startRender();
-soundcloudUrlTextbox.value = decodeURI(document.location.hash.substring(1));
-if (/soundcloud\.com\/.+/.test(soundcloudUrlTextbox.value)) audioPlayer.playSong();
-</script>
-</body>
+	<head>
+		<title>Soundcloud Visualiser</title>
+		<meta charset="UTF-8"> 
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="controlsBlock">
+			<input id="soundcloudUrlTextbox" placeholder="Paste a Soundcloud URL here" type="text" /><input id="playButton" value="Go" type="submit" />
+		</div>
+		<audio id="playerElement" controls></audio>
+		<script src="js/soundcloud/sdk-3.1.2.js"></script>
+		<script src="js/three/three.js"></script>
+		<script src="js/scvisualiser.js"></script>
+	</body>
 </html>

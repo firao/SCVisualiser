@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #efefff;
+}
+
+audio {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+canvas {
+	z-index: -1;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+#controlsBlock {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+}
+
+#soundcloudUrlTextbox {
+	padding: 0.5em 1em;
+	flex: 1;
+	border: none;
+}
+
+#playButton {
+	background-color: #CCC;
+	border: none;
+}
